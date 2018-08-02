@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="page-header">
+         <h1>Headline News</h1>
+            <div class="pull-right"><br>
+                <%= link_to  "post message", new_message_path, class:"btn btn-success" %>
+            </div>
+    </div>    
+</div>
+<% @messages.each do |m| %>
+    <div class="cotainer">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="thumbnail"> 
+                <div class="caption">
+                    <h3><%= m.title %></h3>
+                    <p><%= link_to  "Read More", m, class:"btn btn-primary" %></p>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+<% end %>
+
+
+    

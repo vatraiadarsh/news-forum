@@ -5,8 +5,8 @@ ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Use mysql2 as the database for Active Record
+gem 'mysql2'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -34,6 +34,11 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+
+gem 'simple_form', '~> 4.0', '>= 4.0.1'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+gem 'devise', '~> 4.4', '>= 4.4.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1,0 +1,24 @@
+<div class="container">
+        <div class="jumbotron">
+              <div class="panel panel-primary">
+                    <div class="panel-heading">
+                      <%= @message.title %>
+                    </div>
+                   <!-- @message.title bec in controller show function there is @message = Message.find(params[:id]) -->
+                    <div class="panel-body">
+                        <p>
+                          <%= time_ago_in_words(@message.created_at) %> ago
+                        </p>
+                        <hr>
+                        <p>
+                            <%= @message.description %>
+                        </p>
+                    </div>
+                  <div class="panel-footer">
+                        <%= link_to  "Back", root_path, class:"btn btn-default" %>
+                        <%= link_to  "Edit", edit_message_path(@message), class:"btn btn-primary" %>
+                        <%= link_to  "Delete", message_path(@message), method: :delete, data:{confirm:"Are U Sure?"}  ,class:"btn btn-danger" %>
+                  </div>
+              </div>
+        </div>
+    </div>
